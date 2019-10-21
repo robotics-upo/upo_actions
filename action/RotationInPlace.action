@@ -1,0 +1,8 @@
+# Define the goal
+bool execute_rotation  
+---
+# Define the result
+bool executed
+---
+# Define a feedback message: angular to distance to finish the rotation
+std_msgs/Float32 angular_distance

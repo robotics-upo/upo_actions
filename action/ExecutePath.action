@@ -1,0 +1,12 @@
+# Define the goal
+trajectory_msgs/MultiDOFJointTrajectory path
+---
+# Define the result
+bool arrived # if arrived false-> it means a global replanning request
+---
+# Define a feedback message
+#std_msgs/Float32 distance_to_goal
+std_msgs/Float32 planning_rate
+std_msgs/UInt8 global_waypoint 
+std_msgs/String status
+#std_msgs/Float64 travel_time
