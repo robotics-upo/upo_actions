@@ -8,6 +8,7 @@ project(upo_actions)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  std_msgs
   actionlib
   actionlib_msgs
   genmsg
@@ -16,15 +17,6 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   trajectory_msgs
 )
-
-## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
-
-
-## Uncomment this if the package has a setup.py. This macro ensures
-## modules and global scripts declared therein get installed
-## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-# catkin_python_setup()
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -65,17 +57,19 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate actions in the 'action' folder
-# add_action_files(
-#   FILES
-#   Action1.action
-#   Action2.action
-# )
+add_action_files(
+  FILES
+  ExecutePath.action
+  MakePlan.action
+  Navigate.action
+  RotationInPlace.action
+)
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   actionlib_msgs#   geometry_msgs#   trajectory_msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  actionlib_msgs   geometry_msgs   trajectory_msgs std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -109,7 +103,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES upo_actions
-#  CATKIN_DEPENDS actionlib actionlib_msgs genmsg geometry_msgs message_generation roscpp trajectory_msgs
+  CATKIN_DEPENDS actionlib actionlib_msgs genmsg geometry_msgs message_generation roscpp trajectory_msgs
 #  DEPENDS system_lib
 )
 
