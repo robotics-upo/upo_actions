@@ -12,5 +12,5 @@ bool not_possible
 std_msgs/Float32 distance_to_goal
 std_msgs/UInt8 global_waypoint 
 std_msgs/Duration travel_time
-std_msgs/String percent achieve
+std_msgs/String percent_achieved
 std_msgs/String ETA
