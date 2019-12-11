@@ -1,0 +1,14 @@
+# Define the goal
+std_msgs/String mission_name
+---
+# Define the result
+bool finished 
+std_msgs/UInt32 successful_inspections
+std_msgs/UInt32 total_inspections
+---
+# Define a feedback message
+std_msgs/UInt32 waypoint 
+std_msgs/UInt32 inspection_point 
+std_msgs/String last_ip_color
+std_msgs/String extra_info
+bool inspecting
