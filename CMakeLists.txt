@@ -64,6 +64,7 @@ add_action_files(
   Navigate.action
   RotationInPlace.action
   ExecuteMission.action
+  FireDetection.action
 )
 
 ## Generate added messages and services with any dependencies listed here
