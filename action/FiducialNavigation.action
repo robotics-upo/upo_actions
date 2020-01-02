@@ -1,11 +1,12 @@
 # Define the goal
-std_msgs/Int32 fiduacialNbr
+std_msgs/Int32 fiducialOrientation
+std_msgs/Int32 fiducialGoal
 geometry_msgs/Pose goalPose
-geometry_msgs/Pose initPose
+bool reverse
 ---
 # Define the result
 bool success
 ---
 # Define a feedback message
-geometry_msgs/Pose relativePose
+std_msgs/String msg
  
