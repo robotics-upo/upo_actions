@@ -1,0 +1,10 @@
+# Define the goal
+geometry_msgs/PointStamped global_goal 
+---
+# Define the result
+bool arrived
+std_msgs/Float32 finalDist
+---
+# Define a feedback message
+std_msgs/Float32 distToGoal
+geometry_msgs/Twist speed

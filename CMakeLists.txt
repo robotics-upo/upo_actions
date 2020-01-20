@@ -62,6 +62,7 @@ add_action_files(
   ExecutePath.action
   MakePlan.action
   Navigate.action
+  Navigate3D.action
   RotationInPlace.action
   ExecuteMission.action
   FireDetection.action
