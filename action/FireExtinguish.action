@@ -1,0 +1,12 @@
+# Action to command the robot to extinguish the fire
+# This action should activate the local controller to point and activate the pumps
+# Define the goal
+bool fire_centered
+---
+# Define the result
+bool fire_finded 
+---
+# Define a feedback message
+uint16 pos_x_fire
+uint16 pos_y_fire
+
