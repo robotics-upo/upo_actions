@@ -65,8 +65,9 @@ add_action_files(
   Navigate3D.action
   RotationInPlace.action
   ExecuteMission.action
-  FireDetection.action
   FiducialNavigation.action
+  FireDetection.action
+  FireDetection3D.action
   FireExtinguish.action
 )
 

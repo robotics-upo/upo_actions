@@ -1,3 +1,5 @@
+# Action to command the robot to extinguish the fire
+# This action should activate the local controller to point and activate the pumps
 # Define the goal
 bool fire_centered
 ---
