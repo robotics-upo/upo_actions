@@ -67,6 +67,7 @@ add_action_files(
   ExecuteMission.action
   FireDetection.action
   FiducialNavigation.action
+  FireExtinguish.action
 )
 
 ## Generate added messages and services with any dependencies listed here

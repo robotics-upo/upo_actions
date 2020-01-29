@@ -1,0 +1,10 @@
+# Define the goal
+bool fire_centered
+---
+# Define the result
+bool fire_finded 
+---
+# Define a feedback message
+uint16 pos_x_fire
+uint16 pos_y_fire
+
