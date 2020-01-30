@@ -1,6 +1,6 @@
 # Define the goal
 # Time to try to detect the fire (in seconds. If 0 detect until success)
-duration detect_time
+std_msgs/Duration detect_time
 ---
 # Define the result
 bool fire_found
@@ -10,6 +10,6 @@ float64[9] covariance
 ---
 # Define a feedback message
 #Current time since the begining (in seconds)
-duration current_time
+std_msgs/Duration current_time
 
 

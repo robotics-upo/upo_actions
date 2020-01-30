@@ -1,11 +1,11 @@
 # Define the goal
 # Time to try to detect the fire (in seconds)
-duration detect_time
+std_msgs/Duration detect_time
 ---
 # Define the result
 bool fire_found 
 ---
 # Define a feedback message
 #Current time since the begining (in seconds)
-duration current_time
+std_msgs/Duration current_time
 
