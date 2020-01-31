@@ -5,7 +5,10 @@ std_msgs/Duration detect_time
 # Define the result
 bool fire_found
 geometry_msgs/Point fire_position
-float64[9] covariance
+std_msgs/Float64 errorX
+std_msgs/Float64 errorY
+std_msgs/Float64 errorZ
+
  
 ---
 # Define a feedback message
