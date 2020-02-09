@@ -156,11 +156,23 @@ void fireDetectionGoalCB()
     //Preempts received for the new goal between checking if isNewGoalAvailable or invocation of a goal callback and the acceptNewGoal call will not trigger a preempt callback. This means, isPreemptRequested should be called after accepting the goal even for callback-based implementations to make sure the new goal does not have a pending preempt request.
 
    if(fdas_.isPreemptRequested())
-	fdas_.setPreempted();
+   {
+	upo_actions::FireDetectionResult fdas_result_;
+    	fdas_result_.fire_found = false;
+
+    	fdas_.setPreempted(fdas_result_);
+    }
+
 
    //Abort current task in the other action server, if any
-    if (fd3das_.isActive())
-	fd3das_.setAborted();
+   if (fd3das_.isActive())
+   {
+        upo_actions::FireDetection3DResult f3das_result_;
+    	f3das_result_.fire_found = false;
+
+	fd3das_.setAborted(f3das_result_);
+
+   }
 
   }
 
@@ -169,7 +181,13 @@ void fireDetectionPreemptCB()
   {
     //ROS_INFO("%s: Preempted", action_name_.c_str());
     // set the action state to preempted
-    fdas_.setPreempted();
+    ROS_INFO("firedetection emulator: Preempted");
+
+    //Return a failed result
+    upo_actions::FireDetectionResult fdas_result_;
+    fdas_result_.fire_found = false;
+
+    fdas_.setPreempted(fdas_result_);
   }
 
 //! Fire 3D detection actions
@@ -191,12 +209,21 @@ void fireDetection3DGoalCB()
 
     //Preempts received for the new goal between checking if isNewGoalAvailable or invocation of a goal callback and the acceptNewGoal call will not trigger a preempt callback. This means, isPreemptRequested should be called after accepting the goal even for callback-based implementations to make sure the new goal does not have a pending preempt request.
    if(fd3das_.isPreemptRequested())
-	fd3das_.setPreempted();
+   {
+	upo_actions::FireDetection3DResult f3das_result_;
+    	f3das_result_.fire_found = false;
+    	fd3das_.setPreempted(f3das_result_);
+   }
 
     //Abort current task in the other action server, if any
     if (fdas_.isActive())
-	fdas_.setAborted();   
+    {
+	upo_actions::FireDetectionResult fdas_result_;
+    	fdas_result_.fire_found = false;
 
+	fdas_.setAborted(fdas_result_);
+
+    }
 
   }
 
@@ -205,11 +232,13 @@ void fireDetection3DPreemptCB()
   {
     //ROS_INFO("%s: Preempted", action_name_.c_str());
     // set the action state to preempted
-    fd3das_.setPreempted();
+    ROS_INFO("firedetection3D emulator: Preempted");
+
+    upo_actions::FireDetection3DResult f3das_result_;
+    f3das_result_.fire_found = false;
+
+    fd3das_.setPreempted(f3das_result_);
   }
-
-
-
 
 
 };
