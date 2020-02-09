@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<launch>
+
+  
+<arg name="namespace" default="siar"/>
+
+  <group ns="$(arg namespace)">
+	  <node pkg="upo_actions" type="firedetectionemulator" name ="fire_detection_node" output="screen">
+	    
+	    <param name="success_percentaje" value="1.0"/>
+	    <param name="duration" value="10.0"/>
+	   
+	  </node>
+
+	  <node pkg="upo_actions" type="makeplanemulator" name ="make_plan_node" output="screen">
+	    
+	    <param name="success_percentaje" value="1.0"/>
+	    <param name="duration" value="5.0"/>
+	   
+	  </node>
+
+	 <node pkg="upo_actions" type="fireextinguishemulator" name ="fire_extinguish_node" output="screen">
+	    
+	    <param name="success_percentaje" value="1.0"/>
+	    <param name="duration" value="3.0"/>
+	   
+	  </node>
+
+
+  </group>
+
+</launch>
