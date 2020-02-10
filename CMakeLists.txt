@@ -141,7 +141,7 @@ include_directories(
 add_executable(firedetectionemulator src/firedetection_action_emulator_node.cpp)
 add_executable(makeplanemulator src/makeplan_action_emulator_node.cpp)
 add_executable(fireextinguishemulator src/fireextinguish_action_emulator_node.cpp)
-
+add_executable(windowdetectionemulator src/windowdetection_action_emulator_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -165,6 +165,11 @@ target_link_libraries(makeplanemulator
 target_link_libraries(fireextinguishemulator
    ${catkin_LIBRARIES}
  )
+
+ target_link_libraries(windowdetectionemulator
+   ${catkin_LIBRARIES}
+ )
+
 
 #############
 ## Install ##

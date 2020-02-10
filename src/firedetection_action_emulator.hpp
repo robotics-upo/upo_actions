@@ -92,19 +92,26 @@ void process(void)
 		{
 			fd3das_result_.fire_found = false;
 			fd3das_.setAborted(fd3das_result_);
-		}else if (success_rate_>random_number_ && fd3das_current_duration_ > action_duration_)
+		}else if (fd3das_current_duration_ > action_duration_)
 		{
 
-			fd3das_result_.fire_found = true;
-			fd3das_result_.fire_position.x = 2.0;
-			fd3das_result_.fire_position.y = 5.0;
-			fd3das_result_.fire_position.z = 1.0;
+			if(success_rate_>random_number_)
+			{
+				fd3das_result_.fire_found = true;
+				fd3das_result_.fire_position.x = 2.0;
+				fd3das_result_.fire_position.y = 5.0;
+				fd3das_result_.fire_position.z = 1.0;
 
-			fd3das_result_.errorX.data = 1.0;
-			fd3das_result_.errorY.data = 1.0;
-			fd3das_result_.errorZ.data = 1.0;
+				fd3das_result_.errorX.data = 1.0;
+				fd3das_result_.errorY.data = 1.0;
+				fd3das_result_.errorZ.data = 1.0;
 					
-			fd3das_.setSucceeded(fd3das_result_);
+				fd3das_.setSucceeded(fd3das_result_);
+			}else
+			{
+				fd3das_result_.fire_found = false;
+				fd3das_.setAborted(fd3das_result_);
+			}
 
 		}
 

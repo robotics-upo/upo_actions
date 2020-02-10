@@ -1,4 +1,5 @@
 # Define the goal
+std_msgs/Duration detect_time
 ---
 # Define the result
 bool window_found
@@ -7,5 +8,7 @@ std_msgs/Float64 errorX
 std_msgs/Float64 errorY
 std_msgs/Float64 errorZ 
 ---
-
+# Define a feedback message
+#Current time since the begining (in seconds)
+std_msgs/Duration current_time
 
