@@ -1,0 +1,11 @@
+# Define the goal
+---
+# Define the result
+bool window_found
+geometry_msgs/Pose window_position
+std_msgs/Float64 errorX
+std_msgs/Float64 errorY
+std_msgs/Float64 errorZ 
+---
+
+
