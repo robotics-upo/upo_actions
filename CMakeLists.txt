@@ -69,6 +69,7 @@ add_action_files(
   FireDetection.action
   FireDetection3D.action
   FireExtinguish.action
+  WindowDetection.action
 )
 
 ## Generate added messages and services with any dependencies listed here
