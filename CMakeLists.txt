@@ -70,6 +70,8 @@ add_action_files(
   FireDetection3D.action
   FireExtinguish.action
   WindowDetection.action
+  Landing.action
+  TakeOff.action
 )
 
 ## Generate added messages and services with any dependencies listed here
