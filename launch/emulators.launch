@@ -27,7 +27,7 @@
 
   </group>
 
-  <group ns="firefly1">
+  <!--<group ns="firefly1">-->
 	  <node pkg="upo_actions" type="firedetectionemulator" name ="fire_detection_node" output="screen">
 	    
 	    <param name="success_percentaje" value="1.0"/>
@@ -35,12 +35,12 @@
 	   
 	  </node>
 
-	  <!--<node pkg="upo_actions" type="makeplanemulator" name ="make_plan_node" output="screen">
+	  <node pkg="upo_actions" type="makeplanemulator" name ="make_plan_node" output="screen">
 	    
 	    <param name="success_percentaje" value="1.0"/>
 	    <param name="duration" value="5.0"/>
 	   
-	  </node>-->
+	  </node>
 
 	 <node pkg="upo_actions" type="fireextinguishemulator" name ="fire_extinguish_node" output="screen">
 	    
@@ -56,9 +56,22 @@
 	   
 	  </node>
 
+	<node pkg="upo_actions" type="takeoffemulator" name ="takeoff_node" output="screen">
+	    
+	    <param name="success_percentaje" value="1.0"/>
+	    <param name="duration" value="2.0"/>
+	   
+	  </node>
+
+	<node pkg="upo_actions" type="landingemulator" name ="landing_node" output="screen">
+	    
+	    <param name="success_percentaje" value="1.0"/>
+	    <param name="duration" value="2.0"/>
+	   
+	  </node>
 
 
-  </group>
+ <!-- </group>-->
 
 </launch>
 
