@@ -22,7 +22,7 @@ class FireDetectionActionEmulator
 
 public:
 
- FireDetectionActionEmulator(ros::NodeHandle nh): fdas_(nh, "firedetection", false), fd3das_(nh, "firedetection3D", false)
+ FireDetectionActionEmulator(ros::NodeHandle nh): fdas_(nh, "firedetection", false), fd3das_(nh, "firedetection3D_bottom", false)
 {
 
 	ros::NodeHandle nhp("~");

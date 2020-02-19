@@ -142,7 +142,7 @@ class FireExtinguishActionEmulator
 
 public:
 
- FireExtinguishActionEmulator(ros::NodeHandle nh): action_(nh, "fire_extinguisher", false)
+ FireExtinguishActionEmulator(ros::NodeHandle nh): action_(nh, "blanket_fire_extinguisher", false)
 {
 	ros::NodeHandle nhp("~");
 	float duration_of_action;
