@@ -1,5 +1,5 @@
 # Define the goal
-geometry_msgs/PointStamped global_goal 
+geometry_msgs/PoseStamped global_goal 
 ---
 # Define the result
 bool arrived
