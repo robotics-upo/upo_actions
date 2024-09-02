@@ -1,6 +1,9 @@
 # Define the goal
 trajectory_msgs/MultiDOFJointTrajectory path
 float32[] length_catenary
+float32[] cat_param_x0
+float32[] cat_param_y0
+float32[] cat_param_a
 ---
 # Define the result
 bool arrived # if arrived false-> it means a global replanning request
