@@ -65,11 +65,6 @@ add_action_files(
   Navigate3D.action
   RotationInPlace.action
   ExecuteMission.action
-  FiducialNavigation.action
-  FireDetection.action
-  FireDetection3D.action
-  FireExtinguish.action
-  WindowDetection.action
   Landing.action
   TakeOff.action
 )
@@ -140,10 +135,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(firedetectionemulator src/firedetection_action_emulator_node.cpp)
 add_executable(makeplanemulator src/makeplan_action_emulator_node.cpp)
-add_executable(fireextinguishemulator src/fireextinguish_action_emulator_node.cpp)
-add_executable(windowdetectionemulator src/windowdetection_action_emulator_node.cpp)
 add_executable(takeoffemulator src/takeoff_action_emulator_node.cpp)
 add_executable(landingemulator src/landing_action_emulator_node.cpp)
 
@@ -155,27 +147,12 @@ add_executable(landingemulator src/landing_action_emulator_node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(firedetectionemulator ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(makeplanemulator ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(fireextinguishemulator ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(windowdetectionemulator ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(takeoffemulator ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(landingemulator ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(firedetectionemulator
-   ${catkin_LIBRARIES}
- )
-
 target_link_libraries(makeplanemulator
-   ${catkin_LIBRARIES}
- )
-
-target_link_libraries(fireextinguishemulator
-   ${catkin_LIBRARIES}
- )
-
- target_link_libraries(windowdetectionemulator
    ${catkin_LIBRARIES}
  )
 

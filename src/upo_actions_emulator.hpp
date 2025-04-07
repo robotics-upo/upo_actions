@@ -10,8 +10,6 @@
 
 #include <actionlib/server/simple_action_server.h>
 #include <upo_actions/MakePlanAction.h>
-#include <upo_actions/FireExtinguishAction.h>
-#include <upo_actions/WindowDetectionAction.h>
 #include <upo_actions/TakeOffAction.h>
 #include <upo_actions/LandingAction.h>
 
