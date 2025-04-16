@@ -67,6 +67,7 @@ add_action_files(
   ExecuteMission.action
   Landing.action
   TakeOff.action
+  GPSNavigation.action
 )
 
 ## Generate added messages and services with any dependencies listed here

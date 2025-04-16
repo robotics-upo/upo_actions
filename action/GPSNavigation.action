@@ -1,0 +1,10 @@
+# Define the goal
+std_msgs/String filename 
+---
+# Define the result
+bool arrived
+---
+# Define a feedback message
+std_msgs/Float32 distance_to_goal
+std_msgs/Int32 current_waypoint
+bool security_stop
